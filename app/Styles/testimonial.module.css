@@ -1,0 +1,138 @@
+.wrapper {
+  padding: 80px 0;
+}
+
+/* TAG */
+.tag {
+  background: #eef4ff;
+  color: #3b6ef5;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+/* TITLE */
+.title {
+  font-size: 35px;
+  font-weight: 700;
+  margin-top: 20px;
+  color: #1d2b4f;
+}
+
+/* SLIDER */
+.slider {
+  position: relative;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARD */
+.card {
+  position: absolute;
+  width: 320px;
+  padding: 25px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+/* ACTIVE */
+.active {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 3;
+}
+
+/* LEFT */
+.prev {
+  transform: translateX(-120%) scale(0.85);
+  opacity: 0.4;
+  z-index: 2;
+}
+
+/* RIGHT */
+.next {
+  transform: translateX(120%) scale(0.85);
+  opacity: 0.4;
+  z-index: 2;
+}
+
+.hidden {
+  display: none;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.imageWrap {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* STARS */
+.stars {
+  color: orange;
+  font-size: 14px;
+}
+
+/* TEXT */
+.text {
+  margin-top: 15px;
+  color: #555;
+  font-size: 15px;
+}
+
+/* QUOTE */
+.quote {
+  font-size: 40px;
+  color: orange;
+  text-align: center;
+}
+
+/* DOTS */
+.dots {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.dots span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #ccc;
+  margin: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.activeDot {
+  background: orange !important;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .title {
+    font-size: 26px;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .prev,
+  .next {
+    display: none;
+  }
+}

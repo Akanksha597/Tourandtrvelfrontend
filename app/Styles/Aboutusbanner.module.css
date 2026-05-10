@@ -1,0 +1,85 @@
+/* Styles/Aboutusbanner.module.css */
+.Aboutusbanner {
+  position: relative;
+  width: 100%;
+  height: 350px; /* Adjusted to match your image aspect ratio */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background: url('/Assests/Contactus/contactusbanner.png') no-repeat center center;
+  background-size: cover;
+  /* This prevents the overlay from escaping this box */
+  overflow: hidden; 
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Use a semi-transparent dark blue to get that "tinted" look */
+  background: rgba(15, 27, 48, 0.8); 
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2; /* Keeps text above the overlay */
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.line {
+  width: 40px;
+  height: 3px;
+  background-color: #ff7c00;
+  margin: 12px auto;
+  border-radius: 2px;
+}
+
+.breadcrumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.link:hover {
+  opacity: 0.8;
+  color: #ff7c00;
+}
+
+.separator {
+  color: #ffffff;
+  opacity: 0.7;
+}
+
+.activePage {
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+/* Fix: Changed .heroSection to .Aboutusbanner for responsiveness */
+@media (max-width: 768px) {
+  .Aboutusbanner {
+    height: 200px;
+  }
+  .title {
+    font-size: 1.8rem;
+  }
+}

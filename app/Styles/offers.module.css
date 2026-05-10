@@ -1,0 +1,131 @@
+.wrapper {
+  padding: 80px 0;
+  background: #f9fbff;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.tag {
+  color: orange;
+  font-size: 14px;
+}
+
+.title {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+/* NAV */
+.nav button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+  background: #eee;
+}
+
+.nav button:last-child {
+  background: #00bcd4;
+  color: #fff;
+}
+
+/* SLIDER */
+.sliderContainer {
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  min-width: 280px;
+  height: 180px;
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* COLORS */
+.blue {
+  background: linear-gradient(135deg, #2196f3, #21cbf3);
+}
+.orange {
+  background: linear-gradient(135deg, #ff9800, #ffc107);
+}
+.cyan {
+  background: linear-gradient(135deg, #00bcd4, #4dd0e1);
+}
+.green {
+  background: linear-gradient(135deg, #4caf50, #81c784);
+}
+
+/* CONTENT */
+.content {
+  z-index: 2;
+}
+
+.content h4 {
+  font-size: 18px;
+}
+
+.price {
+  margin: 10px 0;
+}
+
+.price span {
+  font-weight: bold;
+}
+
+.price del {
+  margin-left: 10px;
+  opacity: 0.7;
+}
+
+/* BUTTON */
+.btn {
+  padding: 8px 16px;
+  border: 1px solid #fff;
+  background: transparent;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* IMAGE */
+.image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 120px;
+  height: 120px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .card {
+    min-width: 220px;
+    height: 160px;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+  .wrapper {
+    padding: 40px 0;
+  }
+}

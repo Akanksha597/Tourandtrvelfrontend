@@ -1,0 +1,199 @@
+/* components/ContactForm/ContactForm.module.css */
+
+.contactSection {
+  padding: 90px 15px;
+  background: linear-gradient(135deg, #f5f9ff, #ffffff);
+}
+
+.contactWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #fff;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+}
+
+/* LEFT IMAGE */
+
+.imageBox {
+  position: relative;
+  min-height: 650px;
+  overflow: hidden;
+}
+
+.contactImage {
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(55, 55, 56, 0.2),
+    rgba(24, 25, 27, 0.75)
+  );
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 50px;
+  color: #fff;
+}
+
+.overlay h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.overlay p {
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 400px;
+}
+
+/* RIGHT FORM */
+
+.formBox {
+  padding: 60px 50px;
+}
+
+.heading {
+  margin-bottom: 35px;
+}
+
+.heading span {
+  color: #0d6efd;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.heading h2 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-top: 10px;
+  color: #111;
+}
+
+.heading p {
+  color: #666;
+  margin-top: 12px;
+  line-height: 1.7;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.inputGroup {
+  position: relative;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  width: 100%;
+  border: 1px solid #e6e6e6;
+  background: #f8fbff;
+  border-radius: 14px;
+  padding: 16px 18px 16px 52px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.inputGroup textarea {
+  resize: none;
+  padding-left: 18px;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  border-color: #0d6efd;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.1);
+}
+
+.icon {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  color: #0d6efd;
+  font-size: 16px;
+}
+
+.submitBtn {
+  border: none;
+   box-shadow: 0 12px 25px rgba(255, 122, 0, 0.5);
+ background: linear-gradient(45deg, #ff7a00, #ff4d00);
+  color: white;
+  padding: 16px 25px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  transition: 0.3s ease;
+}
+
+.submitBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(13, 110, 253, 0.3);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+  .contactWrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .imageBox {
+    min-height: 350px;
+  }
+
+  .overlay {
+    padding: 35px;
+  }
+
+  .overlay h2 {
+    font-size: 32px;
+  }
+
+  .formBox {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .heading h2 {
+    font-size: 28px;
+  }
+
+  .overlay h2 {
+    font-size: 28px;
+  }
+
+  .formBox {
+    padding: 30px 20px;
+  }
+
+  .inputGroup input,
+  .inputGroup textarea {
+    font-size: 14px;
+  }
+
+  .submitBtn {
+    width: 100%;
+  }
+}

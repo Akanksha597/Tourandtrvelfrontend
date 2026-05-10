@@ -1,0 +1,142 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 🎥 VIDEO */
+.video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* 🖼️ IMAGE */
+.image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* 🌫️ OVERLAY */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.7)
+  );
+  z-index: 2;
+}
+
+/* 📝 CONTENT */
+.content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  padding: 20px;
+}
+
+.typing {
+  font-size: 3rem;
+  font-weight: bold;
+  min-height: 70px;
+}
+
+/* BUTTON */
+.btn {
+  margin-top: 20px;
+  padding: 14px 32px;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #0d6efd, #00c6ff);
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.08);
+}
+
+/* DOTS */
+.dots {
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+}
+
+.dots span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 6px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.activeDot {
+  background: white !important;
+  transform: scale(1.3);
+}
+
+/* ARROWS */
+.arrows {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 3;
+}
+
+.arrows button {
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .hero {
+    height: 30vh;
+  }
+
+  .typing {
+    font-size: 1.7rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

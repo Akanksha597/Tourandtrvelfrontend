@@ -1,0 +1,266 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2ff, #f0f9ff);
+  padding: 40px 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.header h1 {
+  font-size: 32px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header p {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* FORM CARD */
+.formCard {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 22px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  border: 1px solid #f1f5f9;
+  transition: 0.3s;
+}
+
+.formCard:hover {
+  transform: translateY(-2px);
+}
+
+/* SECTION TITLE */
+.formCard h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 20px 0 12px;
+  color: #111827;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* INPUT BOX */
+.inputBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  transition: 0.3s;
+}
+
+.inputBox:hover {
+  border-color: #2563eb;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(37,99,235,0.1);
+}
+
+.inputBox input {
+  border: none;
+  outline: none;
+  width: 100%;
+  background: transparent;
+  font-size: 14px;
+}
+
+/* BUTTON */
+.btn {
+ 
+  margin-top: 25px;
+  padding: 15px;
+  border: none;
+  border-radius: 14px;
+ box-shadow: 0 12px 25px rgba(255, 122, 0, 0.5);
+ background: linear-gradient(45deg, #ff7a00, #ff4d00);
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(37,99,235,0.25);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(37,99,235,0.35);
+}
+
+/* SUMMARY CARD */
+.summaryCard {
+  background: linear-gradient(135deg, #111827, #1f2937);
+  color: white;
+  padding: 28px;
+  border-radius: 22px;
+  position: sticky;
+  top: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+.summaryCard h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* CAR BOX */
+.carBox {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+}
+
+/* ROUTE */
+.route {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.06);
+  font-size: 14px;
+}
+
+/* FEATURES */
+.features {
+  margin-top: 15px;
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  color: #e5e7eb;
+}
+
+/* PRICE */
+.priceBox {
+  margin-top: 18px;
+  padding: 4px;
+
+  border-radius: 14px;
+  text-align: center;
+  
+  width: 240px;
+  text-align: left;
+}
+
+.priceBox h2 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.priceBox small {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* TIPS */
+.tips {
+  margin-top: 12px;
+  padding: 12px;
+  background: #fff7ed;
+  border-left: 4px solid #f59e0b;
+  font-size: 12px;
+  border-radius: 10px;
+}
+
+/* THANK YOU */
+.thankYouWrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ecfdf5, #e0f2fe);
+}
+
+.thankYouCard {
+  background: white;
+  padding: 40px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+  max-width: 480px;
+}
+
+.iconCircle {
+  width: 85px;
+  height: 85px;
+  background: #dcfce7;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  margin: 0 auto 15px;
+}
+
+.thankYouCard h1 {
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.thankYouCard h3 {
+  font-size: 16px;
+  color: #16a34a;
+}
+
+.thankBox {
+  margin-top: 15px;
+  background: #f8fafc;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: left;
+  font-size: 13px;
+}
+
+.btnGroup {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.homeBtn {
+  flex: 1;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.secondaryBtn {
+  flex: 1;
+  padding: 12px;
+  background: #e5e7eb;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summaryCard {
+    position: relative;
+  }
+}

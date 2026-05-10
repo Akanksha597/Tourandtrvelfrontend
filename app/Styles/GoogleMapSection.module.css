@@ -1,0 +1,123 @@
+/* components/GoogleMapSection/GoogleMapSection.module.css */
+
+.mapSection {
+  padding: 70px 20px;
+  background: #f5f7fb;
+}
+
+.mapWrapper {
+  position: relative;
+  width: 100%;
+  height: 620px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* GOOGLE MAP */
+
+.map {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* INFO CARD */
+
+.infoCard {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  z-index: 10;
+
+  width: 360px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 22px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.infoCard h3 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 14px;
+}
+
+.infoCard p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rating span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+}
+
+.rating a {
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* TABLET */
+
+@media (max-width: 991px) {
+  .mapWrapper {
+    height: 500px;
+  }
+
+  .infoCard {
+    width: 300px;
+    padding: 18px;
+  }
+
+  .infoCard h3 {
+    font-size: 24px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 576px) {
+  .mapSection {
+    padding: 40px 15px;
+  }
+
+  .mapWrapper {
+    height: 550px;
+    border-radius: 18px;
+  }
+
+  .infoCard {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    width: auto;
+    border-radius: 16px;
+    padding: 16px;
+  }
+
+  .infoCard h3 {
+    font-size: 22px;
+  }
+
+  .infoCard p {
+    font-size: 14px;
+  }
+
+  .rating span {
+    font-size: 16px;
+  }
+}

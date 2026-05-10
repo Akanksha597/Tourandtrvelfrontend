@@ -1,0 +1,224 @@
+.sectionWrapper {
+  background-color: #ffffff;
+  padding: 80px 0;
+  font-family: 'Inter', sans-serif; /* Clean modern font */
+  position: relative;
+  overflow: hidden;
+}
+
+/* --- Left Side Content --- */
+.badgeCustom {
+  background-color: #e8f0fe;
+  color: #1a73e8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 6px 16px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.mainHeading {
+  font-size: 35px;
+  font-weight: 800;
+  color: #0d1b2a;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.subText {
+  color: #6c757d;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 480px;
+}
+
+/* Consultation Box */
+.consultationBox {
+  background-color: #f1f5f9;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  max-width: 480px;
+}
+
+.avatarWrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.avatarImg {
+  object-fit: cover;
+}
+
+.consultationTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0d1b2a;
+  margin: 0 0 4px 0;
+}
+
+.consultationDesc {
+  font-size: 13px;
+  color: #6c757d;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Checklist */
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+.checklistItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0d1b2a;
+  margin-bottom: 12px;
+}
+
+.checkIcon {
+  color: #1a73e8;
+  font-size: 16px;
+}
+
+/* CTA Button */
+.exploreBtn {
+  background: linear-gradient(45deg, #ff7a00, #ff4d00);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 12px 32px;
+  border-radius: 50px;
+  border: none;
+  transition: background-color 0.3s ease;
+   box-shadow: 0 12px 25px rgba(255, 122, 0, 0.5);
+}
+
+.exploreBtn:hover {
+  background-color: #004085;
+}
+
+/* Flight Path Decorative Asset */
+.flightPathContainer {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+  vertical-align: middle;
+}
+
+/* --- Right Side Visuals (Overlapping Grid) --- */
+.imageGrid {
+  position: relative;
+  height: 550px;
+  width: 100%;
+}
+
+/* Hot Air Balloon Decorative Sticker */
+.balloonBadge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Top Left Image Block */
+.topImgCard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 65%;
+  height: 75%;
+  z-index: 2;
+}
+
+.topImgContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px 24px 0 24px;
+  overflow: hidden;
+}
+
+/* Bottom Right Image Block */
+.bottomImgCard {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 55%;
+  height: 65%;
+  z-index: 3;
+}
+
+.bottomImgContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Orange Accent Badge Under Top Image */
+.orangeBadge {
+  position: absolute;
+  bottom: -45px;
+  left: 0;
+  right: 0;
+  background-color: #ff9f43;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  padding: 12px;
+  border-radius: 0 0 20px 20px;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991.98px) {
+  .imageGrid {
+    margin-top: 60px;
+    height: 480px;
+  }
+  .mainHeading {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .mainHeading {
+    font-size: 25px;
+  }
+  .imageGrid {
+    height: 400px;
+    margin-bottom: 20px;
+  }
+  .topImgCard {
+    width: 75%;
+  }
+  .bottomImgCard {
+    width: 65%;
+  }
+  .sectionWrapper {
+    padding: 40px 0;
+  }
+}
