@@ -119,7 +119,7 @@ const Footer = () => {
 
                 <div>
                   <span>Call Anytime</span>
-                  <h5>+91 98765 43210</h5>
+                  <h5>+91 8565978569</h5>
                 </div>
               </div>
 
@@ -170,7 +170,7 @@ const Footer = () => {
         <div className={styles.bottomBar}>
           
           <p>
-            © 2026 Travlio. All Rights Reserved | Designed With ❤️ For Modern
+            © 2026 Ma Pitambra Tours Travel. All Rights Reserved | Designed With ❤️ For Modern
             Travel Website
           </p>
         </div>
