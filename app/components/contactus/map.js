@@ -9,6 +9,7 @@ export default function GoogleMapSection() {
     <section className={styles.mapSection}>
       <div className={styles.mapWrapper}>
         
+
         {/* LEFT INFO CARD */}
     
 
