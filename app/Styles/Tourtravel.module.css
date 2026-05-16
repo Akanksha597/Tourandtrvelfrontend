@@ -237,6 +237,7 @@
   border-radius: 12px;
   background: #f4f7fb;
   font-size: 18px;
+  display: ruby;
 }
 
 .activeView {
@@ -265,7 +266,7 @@
 
 .tourImage {
   width: 100%;
-  height: 260px;
+  height: 190px;
   object-fit: cover;
 }
 

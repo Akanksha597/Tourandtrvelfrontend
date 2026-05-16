@@ -2,127 +2,94 @@
 
 import React, { useEffect, useState } from "react";
 import styles from "../../Styles/HeroBanner.module.css";
-import {
-  motion,
-  AnimatePresence,
-  useScroll,
-  useTransform,
-} from "framer-motion";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const slides = [
   {
-    image: "/Assests/Homepage/Homepagebanner.jpg",
-    text: "Explore The World With Us ",
+    image: "/Assests/Homebanner/Homebanner1.jpeg",
+    title: "Explore The World With Us",
+    subtitle: "Luxury Travel & Adventure Experience",
   },
   {
-    image: "/Assests/Homepage/Homepagebanner1.jpg",
-    text: "Discover Beautiful Destinations ",
+    image: "/Assests/Homebanner/Homebaneer6.png",
+    title: "Discover Beautiful Places",
+    subtitle: "Create Unforgettable Memories With Us",
   },
   {
-    image: "/Assests/Homepage/Homepagebanner2.jpg",
-    text: "Your Trusted Travel Partner",
+    image: "/Assests/Homebanner/Homebanner7.png",
+    title: "Your Trusted Travel Partner",
+    subtitle: "Travel Smart, Travel Happy",
   },
 ];
 
 export default function HeroBanner() {
   const [index, setIndex] = useState(0);
-  const [displayText, setDisplayText] = useState("");
 
-  const current = slides[index];
-
-  // 🎞️ Auto Slide (Smooth timing)
   useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 6000);
-    return () => clearInterval(interval);
+    const slider = setInterval(() => {
+      setIndex((prev) => (prev + 1) % slides.length);
+    }, 5000);
+
+    return () => clearInterval(slider);
   }, []);
-
-  const nextSlide = () => {
-    setIndex((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setIndex((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
-  // ⌨️ Typing Animation (stable)
-  useEffect(() => {
-    let i = 0;
-    setDisplayText("");
-
-    const typing = setInterval(() => {
-      setDisplayText((prev) => prev + current.text.charAt(i));
-      i++;
-
-      if (i >= current.text.length) clearInterval(typing);
-    }, 60);
-
-    return () => clearInterval(typing);
-  }, [index]);
-
-  // 🎯 Parallax
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 500], [0, 120]);
 
   return (
     <section className={styles.hero}>
-      {/* 🎥 VIDEO (ALL DEVICES) */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="none"
-        className={styles.video}
-      >
-        <source src="/Assests/Homepage/bannervideo.mp4" type="video/mp4" />
-      </video>
-
-      {/* 🖼️ IMAGE SLIDER */}
+      {/* IMAGE SLIDER */}
       <AnimatePresence mode="wait">
-        <motion.img
+        <motion.div
           key={index}
-          src={current.image}
-          className={styles.image}
-          initial={{ opacity: 0, scale: 1.2 }}
+          className={styles.imageWrapper}
+          initial={{ opacity: 0, scale: 1.08 }}
           animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 1.1 }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
-          style={{ y }}
-        />
+          exit={{ opacity: 0.6 }}
+          transition={{ duration: 1 }}
+        >
+          <Image
+            src={slides[index].image}
+            alt="banner"
+            fill
+            priority
+            className={styles.image}
+          />
+        </motion.div>
       </AnimatePresence>
 
-      {/* 🌫️ OVERLAY */}
+      {/* OVERLAY */}
       <div className={styles.overlay}></div>
 
-      {/* 📝 CONTENT */}
+      {/* CONTENT */}
       <div className={styles.content}>
-        <h1 className={styles.typing}>{displayText}</h1>
-        <p>Explore More, Worry Less</p>
-        {/* <button className={styles.btn}>Explore Now</button> */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 80 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -40 }}
+            transition={{ duration: 1 }}
+            className={styles.textBox}
+          >
+            <span className={styles.topText}>
+              BEST TRAVEL AGENCY
+            </span>
+
+            <h1>{slides[index].title}</h1>
+
+            <p>{slides[index].subtitle}</p>
+          </motion.div>
+        </AnimatePresence>
       </div>
 
-      {/* 🔘 DOTS */}
-      {/* <div className={styles.dots}>
+      {/* DOTS */}
+      <div className={styles.dots}>
         {slides.map((_, i) => (
           <span
             key={i}
-            className={i === index ? styles.activeDot : ""}
             onClick={() => setIndex(i)}
+            className={i === index ? styles.activeDot : ""}
           />
         ))}
-      </div> */}
-
-      {/* ⬅️➡️ ARROWS */}
-      <div className={styles.arrows}>
-        <button onClick={prevSlide}>
-          <FaArrowLeft />
-        </button>
-        <button onClick={nextSlide}>
-          <FaArrowRight />
-        </button>
       </div>
     </section>
   );

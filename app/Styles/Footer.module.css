@@ -3,7 +3,7 @@
 .footer {
   position: relative;
   overflow: hidden;
-  padding-top: 100px;
+  padding-top: 40px;
   color: white;
   z-index: 1;
 }
@@ -67,7 +67,7 @@
   display: flex;
   align-items: center;
   gap: 18px;
-  margin-bottom: 28px;
+ 
 }
 
 .logoIcon {
@@ -206,7 +206,7 @@
 
 .bottomBar {
   border-top: 1px solid rgba(255,255,255,0.12);
-  margin-top: 80px;
+  margin-top: 15px;
   padding: 28px 0;
   text-align: center;
 }
@@ -257,7 +257,7 @@
 
 @media (max-width: 767px) {
   .footer {
-    padding-top: 70px;
+    padding-top: 30px;
   }
 
   .logo {
@@ -269,7 +269,7 @@
   }
 
   .bottomBar {
-    margin-top: 50px;
+    margin-top: 10px;
   }
 
   .socials {

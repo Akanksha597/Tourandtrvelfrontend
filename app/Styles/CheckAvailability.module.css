@@ -4,7 +4,7 @@
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  padding: 80px 20px;
+  padding: 25px 20px;
 
   background:
     radial-gradient(circle at top left,
@@ -79,7 +79,7 @@
   position: relative;
   z-index: 2;
 
-  max-width: 1450px;
+  max-width: 1200px;
   margin: auto;
 
   display: grid;
@@ -111,7 +111,7 @@
 
 .imageBox img {
   width: 100%;
-  height: 560px;
+  height: 480px;
   object-fit: cover;
 
   transition: 0.6s;
@@ -260,7 +260,7 @@
 
   border-radius: 34px;
 
-  padding: 45px;
+  padding: 30px;
 
   box-shadow:
     0 20px 60px rgba(0,0,0,0.4);
@@ -269,10 +269,10 @@
 }
 
 .card h2 {
-  font-size: 42px;
+  font-size: 25px;
   color: white;
 
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 
   font-weight: 800;
 }
@@ -280,7 +280,7 @@
 /* INPUTS */
 
 .inputGroup {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .inputGroup label {
@@ -336,13 +336,8 @@
 
 .guestGrid {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
   gap: 20px;
-
-  margin-top: 30px;
-
   width: 100%;
 }
 
@@ -360,7 +355,7 @@
 
   border-radius: 24px;
 
-  padding: 24px;
+  padding: 20px;
 
   transition: 0.4s;
 
@@ -387,7 +382,7 @@
 }
 
 .guestTop svg {
-  font-size: 32px;
+  font-size: 20px;
 
   color: #ff9800;
 
@@ -399,13 +394,13 @@
 
   margin: 0;
 
-  font-size: 28px;
+  font-size: 15px;
 }
 
 .guestTop span {
   color: #ffd7b0;
 
-  font-size: 16px;
+  font-size: 15px;
 }
 
 /* INPUT */
@@ -413,7 +408,7 @@
 .guestCard input {
   width: 100%;
 
-  height: 58px;
+  height: 35px;
 
   border-radius: 16px;
 
@@ -424,7 +419,7 @@
 
   color: white;
 
-  padding: 0 18px;
+  padding: 0 10px;
 
   font-size: 18px;
 
@@ -433,7 +428,7 @@
 /* SUMMARY */
 
 .summary {
-  margin-top: 35px;
+  margin-top: 10px;
 
   background:
     linear-gradient(
@@ -444,28 +439,28 @@
 
   border: 1px solid rgba(255,255,255,0.08);
 
-  border-radius: 26px;
+  border-radius: 20px;
 
-  padding: 30px;
+  padding: 13px;
 }
 
 .summary h3 {
   color: white;
 
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 
-  font-size: 26px;
+  font-size: 20px;
 }
 
 .row {
   display: flex;
   justify-content: space-between;
 
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 
   color: white;
 
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .divider {
@@ -477,7 +472,7 @@
 }
 
 .total {
-  font-size: 30px;
+  font-size: 18px;
   font-weight: 800;
 
   color: #ffb74d;
@@ -487,9 +482,9 @@
 
 .bookBtn {
   width: 100%;
-  height: 68px;
+  height: 45px;
 
-  margin-top: 35px;
+  margin-top: 10px;
 
   border: none;
 
@@ -504,7 +499,7 @@
 
   color: white;
 
-  font-size: 19px;
+  font-size: 15px;
   font-weight: 800;
 
   cursor: pointer;
@@ -564,7 +559,7 @@
   }
 
   .card {
-    padding: 28px;
+    padding: 18px;
   }
 
   .guestGrid {
@@ -600,7 +595,7 @@
   }
 
   .card {
-    padding: 28px;
+    padding: 18px;
   }
 
   .guestGrid {
@@ -616,7 +611,7 @@
   }
 
   .card h2 {
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .features {

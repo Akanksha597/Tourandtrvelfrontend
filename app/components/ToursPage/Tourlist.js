@@ -40,6 +40,7 @@ export default function TourList() {
     try {
       const { data } = await axios.get(
         "https://tourapi.shreemwell.in/api/v1/favorite-tour/all-tours"
+        // "http://localhost:5016/api/v1/favorite-tour/all-tours"
       );
 
       if (data?.success) {

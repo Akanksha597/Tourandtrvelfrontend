@@ -5,112 +5,134 @@
 import Image from "next/image";
 import styles from "../../Styles/TravelSteps.module.css";
 import {
-  FaPlane,
+  FaPlaneDeparture,
   FaMapMarkedAlt,
   FaSuitcaseRolling,
 } from "react-icons/fa";
 
 export default function TravelSteps() {
+  const steps = [
+    {
+      id: "01",
+      title: "Search Your Perfect Tour",
+      description:
+        "Explore exciting travel packages, destinations, and customized tours that match your budget and travel style.",
+      icon: <FaPlaneDeparture />,
+      image: "/Assests/Aboutus/Travelsteps1.png",
+    },
+    {
+      id: "02",
+      title: "Choose Your Dream Destination",
+      description:
+        "Select from beautiful beaches, mountains, adventure spots, and luxury holiday destinations around the world.",
+      icon: <FaMapMarkedAlt />,
+      image: "/Assests/Aboutus/travelsteps3.png",
+    },
+    {
+      id: "03",
+      title: "Book & Enjoy Your Journey",
+      description:
+        "Confirm your booking easily and get ready for a comfortable, memorable, and stress-free travel experience.",
+      icon: <FaSuitcaseRolling />,
+      image: "/Assests/Aboutus/Travelsteps2.png",
+    },
+  ];
+
   return (
     <section className={styles.processSection}>
       <div className="container">
+        {/* SECTION TITLE */}
+        <div className={styles.headingArea}>
+          <span className={styles.subTitle}>HOW IT WORKS</span>
+          <h2 className={styles.mainTitle}>
+            Start Your Journey In <span>3 Easy Steps</span>
+          </h2>
+          <p className={styles.description}>
+            Plan your perfect vacation effortlessly with our simple and smooth
+            booking process designed for every traveler.
+          </p>
+        </div>
+
         <div className={styles.wrapper}>
-          {/* TOP STEP */}
+          {/* STEP 1 */}
           <div className={`${styles.stepRow} ${styles.topRow}`}>
             <div className={styles.contentBox}>
-              <div className={styles.number}>01</div>
+              <div className={styles.number}>{steps[0].id}</div>
 
               <div className={styles.content}>
-                <div className={styles.icon}>
-                  <FaPlane />
-                </div>
+                <div className={styles.icon}>{steps[0].icon}</div>
 
                 <div>
-                  <h3>Search Expected Tour</h3>
-                  <p>
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffered alteration.
-                  </p>
+                  <h3>{steps[0].title}</h3>
+                  <p>{steps[0].description}</p>
                 </div>
               </div>
             </div>
 
             <div className={styles.imageWrap}>
               <Image
-                src="/Assests/Aboutus/Travelsteps1.png"
-                alt="Travel"
-                width={250}
-                height={250}
+                src={steps[0].image}
+                alt="Search Tour"
+                width={260}
+                height={260}
                 className={styles.image}
               />
             </div>
           </div>
 
-       
-
-          {/* MIDDLE STEP */}
+          {/* STEP 2 */}
           <div className={`${styles.stepRow} ${styles.middleRow}`}>
             <div className={styles.imageWrap}>
               <Image
-                src="/Assests/Aboutus/travelsteps3.png"
-                alt="Travel"
-                width={250}
-                height={250}
+                src={steps[1].image}
+                alt="Dream Destination"
+                width={260}
+                height={260}
                 className={styles.image}
               />
             </div>
 
             <div className={styles.contentBox}>
-              <div className={styles.number}>02</div>
+              <div className={styles.number}>{steps[1].id}</div>
 
               <div className={styles.content}>
-                <div className={styles.icon}>
-                  <FaMapMarkedAlt />
-                </div>
+                <div className={styles.icon}>{steps[1].icon}</div>
 
                 <div>
-                  <h3>Select Dream Place</h3>
-                  <p>
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffered alteration.
-                  </p>
+                  <h3>{steps[1].title}</h3>
+                  <p>{steps[1].description}</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* BOTTOM STEP */}
+          {/* STEP 3 */}
           <div className={`${styles.stepRow} ${styles.bottomRow}`}>
             <div className={styles.contentBox}>
-              <div className={styles.number}>03</div>
+              <div className={styles.number}>{steps[2].id}</div>
 
               <div className={styles.content}>
-                <div className={styles.icon}>
-                  <FaSuitcaseRolling />
-                </div>
+                <div className={styles.icon}>{steps[2].icon}</div>
 
                 <div>
-                  <h3>Book the Destination</h3>
-                  <p>
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffered alteration.
-                  </p>
+                  <h3>{steps[2].title}</h3>
+                  <p>{steps[2].description}</p>
                 </div>
               </div>
             </div>
 
             <div className={styles.imageWrap}>
               <Image
-                src="/Assests/Aboutus/Travelsteps2.png"
-                alt="Travel"
-                width={250}
-                height={250}
+                src={steps[2].image}
+                alt="Book Destination"
+                width={260}
+                height={260}
                 className={styles.image}
               />
             </div>
           </div>
 
-          {/* SVG PATHS */}
+          {/* SVG DASHED PATHS */}
           <svg
             className={styles.svgLines}
             viewBox="0 0 1400 900"
@@ -121,7 +143,7 @@ export default function TravelSteps() {
               stroke="#d8d8d8"
               strokeWidth="2"
               fill="none"
-              strokeDasharray="6 6"
+              strokeDasharray="8 8"
             />
 
             <path
@@ -129,7 +151,7 @@ export default function TravelSteps() {
               stroke="#d8d8d8"
               strokeWidth="2"
               fill="none"
-              strokeDasharray="6 6"
+              strokeDasharray="8 8"
             />
 
             <path
@@ -137,21 +159,21 @@ export default function TravelSteps() {
               stroke="#d8d8d8"
               strokeWidth="2"
               fill="none"
-              strokeDasharray="6 6"
+              strokeDasharray="8 8"
             />
           </svg>
 
-          {/* PLANES */}
+          {/* FLYING PLANES */}
           <div className={`${styles.plane} ${styles.plane1}`}>
-            <FaPlane />
+            <FaPlaneDeparture />
           </div>
 
           <div className={`${styles.plane} ${styles.plane2}`}>
-            <FaPlane />
+            <FaPlaneDeparture />
           </div>
 
           <div className={`${styles.plane} ${styles.plane3}`}>
-            <FaPlane />
+            <FaPlaneDeparture />
           </div>
         </div>
       </div>

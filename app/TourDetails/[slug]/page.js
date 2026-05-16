@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 import TourDetailsClient from "./TourDetailsClient";
 
 export async function generateStaticParams() {

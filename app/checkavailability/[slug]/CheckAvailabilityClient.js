@@ -251,45 +251,41 @@ export default function CheckAvailabilityClient() {
               <h2>Book Your Dream Trip</h2>
 
               {/* DATE */}
-              <div className={styles.inputGroup}>
-                <label>
-                  <FaCalendarAlt />
-                  Travel Date
-                </label>
+           <div className="row ">
+  {/* TRAVEL DATE */}
+  <div className="col-md-6">
+    <div className={styles.inputGroup}>
+      <label>
+        <FaCalendarAlt />
+        Travel Date
+      </label>
 
-                <input
-                  type="date"
-                  name="travelDate"
-                  value={form.travelDate}
-                  onChange={handleChange}
-                />
-              </div>
+      <input
+        type="date"
+        name="travelDate"
+        value={form.travelDate}
+        onChange={handleChange}
+      />
+    </div>
+  </div>
 
-              {/* PACKAGE TYPE */}
-              <div className={styles.inputGroup}>
-                <label>
-                  Package Type
-                </label>
+  {/* PACKAGE TYPE */}
+  <div className="col-md-6">
+    <div className={styles.inputGroup}>
+      <label>Package Type</label>
 
-                <select
-                  name="packageType"
-                  value={form.packageType}
-                  onChange={handleChange}
-                >
-                  <option value="standard">
-                    Standard
-                  </option>
-
-                  <option value="premium">
-                    Premium
-                  </option>
-
-                  <option value="luxury">
-                    Luxury
-                  </option>
-                </select>
-              </div>
-
+      <select
+        name="packageType"
+        value={form.packageType}
+        onChange={handleChange}
+      >
+        <option value="standard">Standard</option>
+        <option value="premium">Premium</option>
+        <option value="luxury">Luxury</option>
+      </select>
+    </div>
+  </div>
+</div>
               {/* GUESTS */}
               <div className={styles.guestGrid}>
                 {/* ADULT */}

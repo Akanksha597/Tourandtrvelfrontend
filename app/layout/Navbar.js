@@ -42,7 +42,7 @@ export default function Navbar() {
             </div>
 
             <div className={styles.topItem}>
-              <FaPhone /> (69)-868 1689
+              <FaPhone /> +91 1234567890
             </div>
           </div>
 
@@ -69,7 +69,8 @@ export default function Navbar() {
 
           {/* LOGO */}
           <Link href="/" className={styles.logo}>
-            Ma Pitambra Tours Travel
+           <img src="/Assests/logo/logo.png" alt="Logo" className={styles.logoImage} />
+           
           </Link>
 
           {/* DESKTOP MENU */}

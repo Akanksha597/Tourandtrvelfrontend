@@ -43,6 +43,7 @@ const router = useRouter();
     try {
       const { data } = await axios.get(
         "https://tourapi.shreemwell.in/api/v1/favorite-tour/all-tours"
+        // "http://localhost:5016/api/v1/favorite-tour/all-tours"
       );
 
       if (data?.success) {
@@ -128,7 +129,7 @@ const router = useRouter();
               <SwiperSlide key={index}>
                 <img
                   src={img}
-                  alt={`gallery-${index}`}
+                  alt={`gallery-₹{index}`}
                   className={styles.sliderImage}
                 />
               </SwiperSlide>
@@ -277,7 +278,7 @@ const router = useRouter();
 
             {/* LANGUAGES */}
 
-            <div className={styles.cardBox}>
+            {/* <div className={styles.cardBox}>
               <h4>Languages</h4>
 
               <div className="d-flex flex-wrap gap-2">
@@ -294,7 +295,7 @@ const router = useRouter();
                   )
                 )}
               </div>
-            </div>
+            </div> */}
 
             {/* ITINERARY */}
 
@@ -339,7 +340,7 @@ const router = useRouter();
               <div className={styles.priceRow}>
                 <div>
                   <h2>
-                    $
+                    ₹
                     {
                       tour.pricing?.adult
                         ?.discountedPrice
@@ -349,7 +350,7 @@ const router = useRouter();
                   <span
                     className={styles.oldPrice}
                   >
-                    $
+                    ₹
                     {
                       tour.pricing?.adult
                         ?.originalPrice
@@ -368,7 +369,7 @@ const router = useRouter();
 <button
   className={styles.bookBtn}
   onClick={() =>
-    router.push(`/checkavailability/${tour.slug}`)
+    router.push(`/checkavailability/₹{tour.slug}`)
   }
 >
   Check Availability
@@ -408,7 +409,7 @@ const router = useRouter();
                   <span>Adult</span>
 
                   <strong>
-                    $
+                   ₹
                     {
                       tour.pricing?.adult
                         ?.discountedPrice
@@ -424,7 +425,7 @@ const router = useRouter();
                   <span>Child</span>
 
                   <strong>
-                    $
+                    ₹
                     {
                       tour.pricing?.child
                         ?.discountedPrice
@@ -440,7 +441,7 @@ const router = useRouter();
                   <span>Youth</span>
 
                   <strong>
-                    $
+                    ₹
                     {
                       tour.pricing?.youth
                         ?.discountedPrice

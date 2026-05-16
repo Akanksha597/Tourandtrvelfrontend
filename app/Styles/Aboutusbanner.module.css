@@ -8,7 +8,7 @@
   justify-content: center;
   text-align: center;
   color: white;
-  background: url('/Assests/Contactus/contactusbanner.png') no-repeat center center;
+  background: url('/Assests/Contactus/backgroundimage.png') no-repeat center center;
   background-size: cover;
   /* This prevents the overlay from escaping this box */
   overflow: hidden; 

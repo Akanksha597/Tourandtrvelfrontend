@@ -6,7 +6,10 @@
   color: #fff;
   font-size: 14px;
 }
-
+.logoImage{
+  width: 60px;
+  height: 50px;
+}
 .topbarContent {
   width: 92%;
   margin: auto;

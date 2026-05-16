@@ -8,7 +8,7 @@ const Contactusbanner = () => {
       <div className={styles.overlay}></div>
       
       <div className={`${styles.content} container`}>
-        <h1 className={styles.title}>contact us Page</h1>
+        <h1 className={styles.title}>Contact Us </h1>
         <div className={styles.line}></div>
         
         <nav className={styles.breadcrumb}>
@@ -16,7 +16,7 @@ const Contactusbanner = () => {
             Home
           </Link>
           <span className={styles.separator}>/</span>
-          <span className={styles.activePage}>contact us Page</span>
+          <span className={styles.activePage}>Contact Us</span>
         </nav>
       </div>
     </section>

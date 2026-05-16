@@ -24,12 +24,29 @@ export default function ContactForm() {
     message: "",
   });
 
+  // ================= CAPTCHA STATE =================
+  const [captcha, setCaptcha] = useState({
+    num1: Math.floor(Math.random() * 10),
+    num2: Math.floor(Math.random() * 10),
+    answer: "",
+  });
+
   const [loading, setLoading] = useState(false);
 
   // ================= HANDLE CHANGE =================
   const handleChange = (e) => {
     const { name, value } = e.target;
 
+    // CAPTCHA INPUT
+    if (name === "captcha") {
+      setCaptcha((prev) => ({
+        ...prev,
+        answer: value,
+      }));
+      return;
+    }
+
+    // FORM INPUTS
     setFormData((prev) => ({
       ...prev,
       [name]: value,
@@ -52,8 +69,7 @@ export default function ContactForm() {
     }
 
     // EMAIL
-    const emailRegex =
-      /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!email.trim()) {
       toast.error("Email is required");
@@ -93,6 +109,15 @@ export default function ContactForm() {
       return false;
     }
 
+    // CAPTCHA VALIDATION
+    if (
+      parseInt(captcha.answer) !==
+      captcha.num1 + captcha.num2
+    ) {
+      toast.error("Incorrect captcha answer");
+      return false;
+    }
+
     return true;
   };
 
@@ -100,7 +125,7 @@ export default function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // VALIDATE
+    // VALIDATE FORM
     if (!validateForm()) return;
 
     try {
@@ -108,6 +133,7 @@ export default function ContactForm() {
 
       const response = await fetch(
         "https://tourapi.shreemwell.in/api/v1/contact",
+          // "http://localhost:5016/api/v1/contact",
         {
           method: "POST",
           headers: {
@@ -134,6 +160,13 @@ export default function ContactForm() {
           email: "",
           phone: "",
           message: "",
+        });
+
+        // RESET CAPTCHA
+        setCaptcha({
+          num1: Math.floor(Math.random() * 10),
+          num2: Math.floor(Math.random() * 10),
+          answer: "",
         });
       } else {
         toast.error(
@@ -163,11 +196,11 @@ export default function ContactForm() {
       <section className={styles.contactSection}>
         <div className="container">
           <div className={styles.contactWrapper}>
-            
+
             {/* LEFT IMAGE */}
             <div className={styles.imageBox}>
               <Image
-                src="/Assests/Contactus/aboutusimage.jpg"
+                src="/Assests/Contactus/conatctus.png"
                 alt="Contact"
                 fill
                 className={styles.contactImage}
@@ -175,6 +208,7 @@ export default function ContactForm() {
 
               <div className={styles.overlay}>
                 <h2>Let’s Talk</h2>
+
                 <p>
                   We’re here to help you with your
                   travel plans and queries.
@@ -186,7 +220,9 @@ export default function ContactForm() {
             <div className={styles.formBox}>
               <div className={styles.heading}>
                 <span>Contact Us</span>
+
                 <h2>Get In Touch</h2>
+
                 <p>
                   Fill out the form and our team
                   will contact you shortly.
@@ -249,6 +285,21 @@ export default function ContactForm() {
                     value={formData.message}
                     onChange={handleChange}
                   ></textarea>
+                </div>
+
+                {/* CAPTCHA */}
+                <div className={styles.inputGroup}>
+                  <label className={styles.captchaLabel}>
+                    Solve: {captcha.num1} + {captcha.num2} 
+                  </label>
+
+                  <input
+                    type="number"
+                    name="captcha"
+                    placeholder="Enter Answer"
+                    value={captcha.answer}
+                    onChange={handleChange}
+                  />
                 </div>
 
                 {/* BUTTON */}

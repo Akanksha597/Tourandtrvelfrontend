@@ -5,6 +5,7 @@ import styles from "../../Styles/HeroSection.module.css";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 
 export default function HeroSection() {
   const sectionRef = useRef(null);
@@ -116,10 +117,11 @@ gsap.to(planeRef.current, {
                 <p><b>Mission & Vision</b><br />Positive experiences</p>
               </div>
             </div>
-
+            <Link href="/Tour"> 
             <button className={styles.cta}>
               Discover More →
             </button>
+            </Link>
 
           
 

@@ -37,6 +37,7 @@ export default function CabPackagesPage() {
     try {
       const res = await axios.get(
         "https://tourapi.shreemwell.in/api/car-package/"
+        // "http://localhost:5016/api/car-package/"
       );
 
       const data = res.data?.packages || res.data || [];
@@ -480,7 +481,7 @@ export default function CabPackagesPage() {
 
               return (
                 <div
-                  className="col-lg-4 col-md-6"
+                  className="col-lg-6  col-xl-4 col-md-6 g-4"
                   key={item._id}
                 >
 

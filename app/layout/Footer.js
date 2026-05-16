@@ -1,7 +1,8 @@
 // components/Footer/Footer.jsx
 "use client";
-
+import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 import styles from "../Styles/Footer.module.css";
 import {
   FaFacebookF,
@@ -39,19 +40,26 @@ const Footer = () => {
       <div className={styles.bottomShape}></div>
 
       <div className="container position-relative">
-        <div className="row gy-5">
+        <div className="row gy-4">
           {/* LEFT */}
           <div className="col-lg-5">
             <div className={styles.logoWrap}>
-              <div className={styles.logoIcon}>✈</div>
+             
 
-              <div>
-                <h2 className={styles.logo}>Ma Pitambra Tours Travel</h2>
-                <span className={styles.logoText}>
-                  Luxury Travel Agency
-                </span>
-              </div>
-            </div>
+              <div className={styles.logoWrapper}>
+  {/* LOGO IMAGE */}
+  <Image
+    src="/Assests/logo/logo.png"
+    alt="Ma Pitambra Tours Travel"
+    width={80}
+    height={80}
+    className={styles.logoImage}
+  />
+
+  {/* LOGO TEXT */}
+ 
+</div>
+</div>
 
            <p className={`${styles.desc} d-none d-lg-block`}>
   Discover the most beautiful destinations with Ma Pitambra Tours & Travels. From mountains and beaches to international adventures,
@@ -85,25 +93,32 @@ const Footer = () => {
             <h4 className={styles.heading}>Quick Links</h4>
 
             <ul className={styles.links}>
+              <Link href="/" >
               <li>
                 <FaArrowRight /> Home 
               </li>
-
+              </Link>
+           
+              <Link href="/Aboutus" >
               <li>
                 <FaArrowRight /> About us 
               </li>
-
+              </Link>
+               <Link href="/Tour" >     
               <li>
                 <FaArrowRight /> Tour 
               </li>
-
+              </Link>
+            <Link href="/cabpackages" >
               <li>
                 <FaArrowRight />Cab Services 
               </li>
-
+              </Link>
+              <Link href="/Contactus" >
               <li>
                 <FaArrowRight /> Contact Us
               </li>
+              </Link>
             </ul>
           </div>
 
@@ -169,9 +184,8 @@ const Footer = () => {
         {/* COPYRIGHT */}
         <div className={styles.bottomBar}>
           
-          <p>
-            © 2026 Ma Pitambra Tours Travel. All Rights Reserved | Designed With ❤️ For Modern
-            Travel Website
+          <p> 
+            Designed and Developed by © 2026 Shreem Ai © Ma Pitambra Tours Travel. All Rights Reserved
           </p>
         </div>
       </div>
