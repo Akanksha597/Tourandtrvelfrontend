@@ -369,7 +369,7 @@ const router = useRouter();
 <button
   className={styles.bookBtn}
   onClick={() =>
-    router.push(`/checkavailability/₹{tour.slug}`)
+    router.push(`/checkavailability/${tour.slug}`)
   }
 >
   Check Availability
